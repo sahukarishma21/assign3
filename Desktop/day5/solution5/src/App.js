@@ -10,15 +10,15 @@ function App() {
 
   }
   function handlingclick(){
+    if (count > 0) {
     const newOne=count-1
     setCount(newOne)
   }
-
+  }
   return (
     <div className="App">
-      <h4>count is:</h4>
-      <h4>{count}</h4>
-      <h1>{count}</h1>
+      <h1>Increase and Decrease Count</h1>
+      <h1 style={{color:'purple'}}>Count: {count}</h1>
       <button onClick={handleclick}>Increase the count</button>
       <button onClick={handlingclick}>Decrease the count</button>
   
