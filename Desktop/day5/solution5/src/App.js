@@ -17,7 +17,8 @@ function App() {
   }
   return (
     <div className="App">
-      <h1>Increase and Decrease Count</h1>
+      
+      <h1 style={{color:'red'}}>Increase and Decrease Count</h1>
       <h1 style={{color:'purple'}}>Count: {count}</h1>
       <button onClick={handleclick}>Increase the count</button>
       <button onClick={handlingclick}>Decrease the count</button>
