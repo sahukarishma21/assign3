@@ -1,0 +1,28 @@
+.luckynumber{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    background-color: rgb(146, 184, 175);
+}
+.inputType{
+    height: 30px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    background-color: aqua;
+}
+.submitBtn {
+    background-color: rgb(0, 174, 255);
+    border: none;
+    color: white;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+
+
+
+
+
