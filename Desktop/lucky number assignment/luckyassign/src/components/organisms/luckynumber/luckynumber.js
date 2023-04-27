@@ -21,9 +21,6 @@ export default function Luckynumber(){
             alert('congratulations you guessed the right number')
             return
 
-        }else if(!number==0){
-            alert('none')
-            return
         }
     
 
@@ -39,8 +36,3 @@ export default function Luckynumber(){
             </div>
         )
     }
-
-
-
-
-    //luckynum

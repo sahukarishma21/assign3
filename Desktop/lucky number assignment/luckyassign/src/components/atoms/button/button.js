@@ -11,9 +11,3 @@ export default function Button ({cuttonBtnStyle,clickFunction}) {
         </button>
     )
 }
-
-
-
-
-
-//luckynum 
