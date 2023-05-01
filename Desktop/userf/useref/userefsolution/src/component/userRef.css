@@ -1,0 +1,16 @@
+.App{
+    background-color: aqua;
+    font-size: 50px;
+    cursor: pointer;
+    
+    
+}
+button{
+    
+    margin: 10px;
+    background-color: rgb(123, 174, 189);
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 300px, red;
+  }
