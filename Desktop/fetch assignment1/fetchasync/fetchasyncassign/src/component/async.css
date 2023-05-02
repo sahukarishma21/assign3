@@ -1,0 +1,13 @@
+.App{
+    background-color: rgb(42, 163, 165);
+    height: 30px;
+   
+    cursor: pointer;
+}
+button{
+    margin:15px;
+    background-color: rgb(89, 145, 156);
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+}
