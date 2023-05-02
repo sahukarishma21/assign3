@@ -41,3 +41,5 @@ export default function Fetchassyn() {
     </div>
   );
 }
+
+//fetch
