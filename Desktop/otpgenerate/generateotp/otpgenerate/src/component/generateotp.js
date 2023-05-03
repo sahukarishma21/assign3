@@ -61,4 +61,6 @@ export default function OtpGen() {
   );
 }
 
-//otp
+
+
+//otpgen
