@@ -1,67 +1,65 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 export default function OtpGen() {
-  const [mobile, setMobile] = useState('');
-  const [message, setMessage] = useState('');
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [otpSent, setOtpSent] = useState(false);
+  const [otpError, setOtpError] = useState("");
 
-  const handlingSubmit = async (e) => {
-    e.preventDefault();
-    const response = await axios.get('https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ mobile: parseInt(mobile) }),
-    });
+  const handleMobileNumberChange = (event) => {
+    setMobileNumber(event.target.value);
+  };
 
-    if (response.ok) {
-      setMessage('OTP sent successfully!');
-      setMobile('');
-    } else {
-      setMessage('Failed to send OTP. Please check your mobile number.');
+  const handleSendOtpClick = async () => {
+    const mobileRegex = /^[6-9]\d{9}$/;
+    if (!mobileRegex.test(mobileNumber)) {
+      setOtpError("Please enter a valid 10 digit Indian mobile number.");
+      return;
     }
-  };
 
-  const handleChange = (e) => {
-    setMobile(e.target.value);
-  };
+    const body = { mobile: mobileNumber };
+    try {
+      const response = await axios.post(
+        "https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP",
+        body,
 
-  const isValidMobile = (mobile) => {
-    const regex = /^[6-9]\d{9}$/;
-    return regex.test(mobile);
-  };
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-  const handleBlur = () => {
-    if (!isValidMobile(mobile)) {
-      setMessage('Please enter a valid 10-digit mobile number.');
-    } else {
-      setMessage('');
+      if (response.status === 200) {
+        setOtpSent(true);
+        setOtpError("");
+        setMobileNumber("");
+      } else {
+        setOtpSent(false);
+        setOtpError("Failed to send OTP. Please try again later.");
+      }
+    } catch (error) {
+      setOtpSent(false);
+      setOtpError(
+        error.response?.data?.error || "Failed to send OTP. Please try again later."
+      );
     }
   };
 
   return (
     <div>
-      <h1>OTP Generate</h1>
-      <form onSubmit={handlingSubmit}>
-        <label htmlFor="mobile">Mobile Number:</label>
-        <input
-          type="tel"
-          id="mobile"
-          name="mobile"
-          value={mobile}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {message && <p>{message}</p>}
-        <button type="submit" disabled={!isValidMobile(mobile)}>
-          Send OTP
-        </button>
-      </form>
+      <h1>Enter Your Mobile Number</h1>
+      <input
+        type="number"
+        placeholder="mobile"
+        value={mobileNumber}
+        onChange={handleMobileNumberChange}
+      />
+
+      <button onClick={handleSendOtpClick}>GET OTP</button>
+
+      {otpSent && <p>OTP sent successfully!</p>}
+      {otpError && <p>{otpError}</p>}
     </div>
   );
-}
-
-
-
-//otpgeneaxios
+};
