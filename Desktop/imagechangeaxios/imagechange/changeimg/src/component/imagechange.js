@@ -2,7 +2,7 @@ import { useState } from "react"
 import axios from "axios"
 
 export default function Imagechange() {
-const [img, setImg] = useState()
+const [img, setImg] = useState('https://images.pexels.com/photos/1643457/pexels-photo-1643457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')
 
 async function handalClick(){
  const res= await axios.get('https://dog.ceo/api/breeds/image/random')
@@ -25,4 +25,4 @@ async function handalClick(){
 
 
 
-    //changeimg
+    //changeimage
