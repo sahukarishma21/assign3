@@ -9,7 +9,7 @@
   
   .todo .crossText {
     text-decoration: line-through;
-    color: rgb(20, 173, 74);
+    color: rgb(74, 20, 173);
   }
   
   .todo input {
@@ -108,5 +108,6 @@
     padding-left: 10px;
     padding-right: 5px;
 }
+
 
 
