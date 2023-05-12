@@ -52,7 +52,7 @@
   .todo ul {
     margin-top: 30px;
     font-size: 1.5rem;
-    background-color: aqua;
+    color: aqua;
   }
   
   .todo ul li {
@@ -64,8 +64,10 @@
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 5px;
-    margin-left: -100px;
-    
+    cursor: pointer;
+    margin-left: 40px;
+    margin-right: 40px;
+   
     background-color: rgb(236, 236, 236, 0.6);
     font-family: "Permanent Marker", cursive;
     color: black;
@@ -79,6 +81,7 @@
     cursor: pointer;
     background-color: red;
     color: white;
+    align-items: center;
   }
   
   .todo ul li .completed {
@@ -91,6 +94,7 @@
     background-color:blue;
     margin-left: 10px;
     color: white;
+    align-items: center;
   }
 .title{
     background-color: rgb(22, 153, 173);
@@ -104,3 +108,5 @@
     padding-left: 10px;
     padding-right: 5px;
 }
+
+
