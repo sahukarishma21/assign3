@@ -1,0 +1,106 @@
+.todo {
+    align-self: center;
+    color:pink;
+    font-size: 1rem;
+    background-color: rgb(8, 66, 68);
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .todo .crossText {
+    text-decoration: line-through;
+    color: rgb(20, 173, 74);
+  }
+  
+  .todo input {
+    background: rgb(239, 128, 150);
+    border: none;
+    color: rgb(7, 35, 61);
+    border-bottom: 5px dashed rgb(18, 5, 41);
+    min-width: 400px;
+    margin-top: 40px;
+    padding: 5px;
+    font-size: 1rem;
+  }
+  .todo input:placeholder {
+    color:rgb(7, 35, 61);
+    font-size: 1.3rem;
+  }
+  .todo input:focus {
+    outline: none;
+    border: 2px dotted darkblue;
+  }
+  
+  .todo .add-btn {
+    padding: 10px;
+    border-radius: 30%;
+    color: crimson;
+    font-size: 1.2rem;
+    background-color:yellow;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 3px solid violet;
+  }
+  
+  .todo .add-btn:hover {
+    padding: 15px;
+    font-size: 1.5rem;
+    
+  }
+  
+  .todo ul {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    background-color: aqua;
+  }
+  
+  .todo ul li {
+    list-style: none;
+    margin-bottom: 4px;
+  
+    border: 2px solid green;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-left: -100px;
+    
+    background-color: rgb(236, 236, 236, 0.6);
+    font-family: "Permanent Marker", cursive;
+    color: black;
+  }
+  .todo ul li .delete {
+    margin-top: 5px;
+    float: right;
+    padding: 4px 10px 4px 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+  }
+  
+  .todo ul li .completed {
+    margin-top: 5px;
+    float: right;
+    padding: 4px 10px 4px 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color:blue;
+    margin-left: 10px;
+    color: white;
+  }
+.title{
+    background-color: rgb(22, 153, 173);
+    font-size:30px;
+    height: 50px;
+    width:50px;
+    color:purple;
+    border: 2px solid black;
+    border-radius: 10px;
+    
+    padding-left: 10px;
+    padding-right: 5px;
+}
