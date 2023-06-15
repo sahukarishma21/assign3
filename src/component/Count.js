@@ -1,4 +1,3 @@
-hiiiii
-jjjj
+console.log("new");
 
 
