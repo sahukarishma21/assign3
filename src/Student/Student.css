@@ -1,0 +1,50 @@
+.form-group {
+    margin-bottom: 1rem;
+    
+  }
+  
+  label {
+    display: block;
+  }
+  
+  input[type='text'],
+  input[type='number'] {
+    width: 30%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color:skyblue;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color:burlywood;
+    border-radius: 10px;
+  }
+  
+  .student-table {
+    margin-top: 1rem;
+    border-collapse: collapse;
+    width: 100%;
+   
+  }
+  
+  .student-table th,
+  .student-table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    background-color: rgb(11, 177, 174);
+    
+
+  }
+  
+  .student-table th {
+    background-color: skyblue;
+  }
+  
+  .student-table td {
+    text-align: center;
+  }
+  *{
+    background-color: mediumslateblue;
+  }
